@@ -2,3 +2,21 @@
   text-align: center;
   margin: 8% 20%;
 }
+
+.count-div {
+  display: flex;
+  justify-content: center;
+}
+
+.count-div button {
+  height: 5rem;
+  width: 5rem;
+  margin: auto 3%;
+  font-size: 4rem;
+}
+
+.count-h1 {
+  color: rgb(0, 91, 194);
+  font-size: 10rem;
+  width: 11rem;
+}

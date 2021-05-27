@@ -1,10 +1,12 @@
 import ApiGithub from './ApiGithub'
+import Count from './Count'
 import './App.css'
 
 
 const App = () => (
   <div className="App">
-    <ApiGithub login="vasylsemak" />
+    <Count />
+    {/* <ApiGithub login="vasylsemak" /> */}
   </div>
 )
 
