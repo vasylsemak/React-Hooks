@@ -1,11 +1,11 @@
-import './App.css';
+import ApiGithub from './ApiGithub'
+import './App.css'
 
-function App() {
-  return (
-    <div className="App">
-      <h1>Initial setup</h1>
-    </div>
-  );
-}
 
-export default App;
+const App = () => (
+  <div className="App">
+    <ApiGithub />
+  </div>
+)
+
+export default App
