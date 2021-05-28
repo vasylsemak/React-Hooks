@@ -9,7 +9,6 @@ const ApiGithub = ({ login }) => {
 
   useEffect(() => {
     if(!login) return
-
     setLoading(true)
 
     fetch(`https://api.github.com/users/${login}`)

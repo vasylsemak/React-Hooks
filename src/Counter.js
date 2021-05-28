@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './App.css'
 
-const Count = () => {
+const Counter = () => {
   const [num, setNum] = useState(0)
   const increment = () => setNum(num => num + 1)
   const decrement = () => setNum(num => num - 1)
@@ -15,4 +15,4 @@ const Count = () => {
   )
 }
 
-export default Count
+export default Counter
