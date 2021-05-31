@@ -1,6 +1,22 @@
 import './App.css'
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Route, Link } from 'react-router-dom'
+
+const About = () => (
+  <div className='about'>
+    <h1>[ ABOUT ]</h1>
+    <div>
+      <Link to="/about/services">Services</Link>
+      <Link to="/about/history">History</Link>
+      <Link to="/about/location">Location</Link>
+    </div>
+    <Route path="/about/services" component={Services} />
+    <Route path="/about/history" component={History} />
+    <Route path="/about/location" component={Location} />
+  </div>
+)
+
+export default About
 
 export function Services() {
   return (
@@ -18,24 +34,11 @@ export function History() {
   )
 }
 
-export function Location() {
+export function Location(props) {
+
   return (
     <div>
       <h2>[ Location ]</h2>
     </div>
   )
 }
-
-
-const About = () => (
-  <div className='about'>
-    <div>
-      <Link to="/about/services">Services</Link>
-      <Link to="/about/history">History</Link>
-      <Link to="/about/location">Location</Link>
-    </div>
-    <h1>[ ABOUT ]</h1>
-  </div>
-)
-
-export default About

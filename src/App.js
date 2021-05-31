@@ -13,9 +13,6 @@ const App = () => (
       <Link to="/about">About</Link>
     </div>
     <Switch>
-      <Route path="/about/services" component={Services} />
-      <Route path="/about/history" component={History} />
-      <Route path="/about/location" component={Location} />
       <Route path="/counter" component={Counter} />
       <Route path="/about" component={About} />
       <Route
