@@ -2,6 +2,10 @@ import './App.css'
 import React from 'react'
 import { Route, Link } from 'react-router-dom'
 
+export const Services = () => <><h2>[ Services ]</h2></>
+export const History = () => <><h2>[ History ]</h2></>
+export const Location = () => <><h2>[ Location ]</h2></>
+
 const About = () => (
   <div className='about'>
     <h1>[ ABOUT ]</h1>
@@ -17,28 +21,3 @@ const About = () => (
 )
 
 export default About
-
-export function Services() {
-  return (
-    <div>
-      <h2>[ Services ]</h2>
-    </div>
-  )
-}
-
-export function History() {
-  return (
-    <div>
-      <h2>[ History ]</h2>
-    </div>
-  )
-}
-
-export function Location(props) {
-
-  return (
-    <div>
-      <h2>[ Location ]</h2>
-    </div>
-  )
-}

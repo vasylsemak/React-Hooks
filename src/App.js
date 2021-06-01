@@ -1,7 +1,7 @@
 import './App.css'
 import ApiGithub from './ApiGithub'
 import Counter from './Counter'
-import About, { Services, History, Location } from './About'
+import About  from './About'
 import { Route, Link, Switch } from 'react-router-dom'
 
 
