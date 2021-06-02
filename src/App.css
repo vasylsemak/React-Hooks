@@ -39,8 +39,8 @@
 .todos {
   text-align: left;
   background-color: rgb(238, 234, 234);
-  margin: 10% auto;
-  padding: 4% 8%;
+  padding: 2% 8%;
+  height: 70vh;
 }
 
 .form {
@@ -68,13 +68,19 @@
   align-items: center;
 }
 .todo h3 {
+  font-size: 1.5rem;
+  font-weight: 500;
   width: 40%;
   margin-right: 9%;
+  cursor: pointer;
+}
+.todo h3::selection {
+  background: transparent;
 }
 
 .btn-add,
 .btn-remove {
-  width: 5%;
+  width: 7%;
   color: rgb(90, 89, 89);
   font-size: 2rem;
   font-weight: 900;

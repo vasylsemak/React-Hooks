@@ -1,6 +1,11 @@
 import './App.css'
 import React, { useState, useReducer } from 'react'
-import reducer, { initialState, addTodo, removeTodo } from './store'
+import reducer, {
+  initialState,
+  addTodo,
+  removeTodo,
+  toggleComplete
+} from './store'
 import Todo from './Todo'
 
 const Todos = () => {
@@ -19,9 +24,13 @@ const Todos = () => {
         />
         <button className='btn-add' type='submit'>+</button>
       </form>
-      {
-        todos.map(todo => <Todo key={todo.id} {...todo} handleRemove={handleRemove} />)
-      }
+      {todos.map(todo =>
+        <Todo
+          key={todo.id} {...todo}
+          handleRemove={handleRemove}
+          handleComplete={handleComplete}
+        />
+      )}
     </div>
   )
 
@@ -38,6 +47,11 @@ const Todos = () => {
 
   function handleRemove(id) {
     dispatch(removeTodo(id))
+  }
+
+  function handleComplete(id) {
+    console.log('Complete -> ', id)
+    dispatch(toggleComplete(id))
   }
 }
 
