@@ -1,30 +1,44 @@
+import './App.css'
 import React, { useState, useReducer } from 'react'
-import reducer, { initialState, addTodo } from './store'
+import reducer, { initialState, addTodo, removeTodo } from './store'
 import Todo from './Todo'
 
 const Todos = () => {
-  const [reducerState, dispatch] = useReducer(reducer, initialState )
+  const [state, setState] = useState('')
+  const [todos, dispatch] = useReducer(reducer, initialState )
 
-  const handleSubmit = e => {
+  return (
+    <div className='todos'>
+      <h2>TODOS</h2>
+      <form className='form' onSubmit={handleAdd}>
+        <input
+          name='todo'
+          value={state}
+          placeholder="Enter todo"
+          onChange={e => setState(e.target.value)}
+        />
+        <button className='btn-add' type='submit'>+</button>
+      </form>
+      {
+        todos.map(todo => <Todo key={todo.id} {...todo} handleRemove={handleRemove} />)
+      }
+    </div>
+  )
+
+  function handleAdd(e) {
     e.preventDefault()
     const todo = {
       id: Date.now(),
       name: e.target.todo.value,
       complete: false
     }
-
     dispatch(addTodo(todo))
+    setState('')
   }
 
-  return (
-    <div className='todos'>
-      {reducerState.map(todo => <Todo key={todo.id} {...todo} />)}
-      <form onSubmit={handleSubmit}>
-        <input name='todo' placeholder="Enter todo" />
-        <button type='submit'>ADD</button>
-      </form>
-    </div>
-  )
+  function handleRemove(id) {
+    dispatch(removeTodo(id))
+  }
 }
 
 export default Todos

@@ -35,3 +35,64 @@
 .about {
   margin-top: 15%;
 }
+
+.todos {
+  text-align: left;
+  background-color: rgb(238, 234, 234);
+  margin: 10% auto;
+  padding: 4% 8%;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5%;
+}
+
+.todos h2 {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: rgb(96, 83, 126);
+}
+
+.todos input {
+  height: 2.5rem;
+  width: 39%;
+  margin-right: 9%;
+  font-size: 1.7rem;
+}
+
+.todo {
+  display: flex;
+  align-items: center;
+}
+.todo h3 {
+  width: 40%;
+  margin-right: 9%;
+}
+
+.btn-add,
+.btn-remove {
+  width: 5%;
+  color: rgb(90, 89, 89);
+  font-size: 2rem;
+  font-weight: 900;
+  padding: 0.38%;
+  background-color: rgb(188, 235, 149);
+  border-radius: 3px;
+  border: 1px solid rgb(90, 89, 89);
+}
+
+.btn-add:hover {
+  color: white;
+  background-color: rgb(78, 99, 62);
+}
+
+.btn-remove {
+  background-color: rgb(255, 133, 133);
+}
+.btn-remove:hover {
+  color: white;
+  background-color: rgb(145, 82, 82);
+}
